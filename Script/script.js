@@ -10,7 +10,7 @@ async function getDataFromServer() {
  const res = await fetch(" http://localhost:3000/products");
   const data = await res.json();
   dataFilledInCard(data);
- 
+
   return data;
 }
 getDataFromServer();
@@ -109,3 +109,4 @@ lowToHigh.addEventListener("click", ()=>{
 highToLow.addEventListener("click", ()=>{
   htl();
 })
+

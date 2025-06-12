@@ -30,6 +30,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="Css/acc.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -99,9 +101,19 @@
                 /></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cart.html"
-                  ><img src="Assets/icons/cart.png" alt=""
-                /></a>
+                <a
+                  class="nav-link active position-relative"
+                  aria-current="page"
+                  href="cart.html"
+                >
+                  <img src="Assets/icons/cart.png" alt="" />
+
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartUpdateNumber"
+                  >
+                   
+                  </span>
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
@@ -144,7 +156,9 @@
                   id="logEmail"
                   aria-describedby="emailHelp"
                   placeholder="Email Address"
+                  required
                 />
+                <span id="logIdEr"></span>
                 
               </div>
               <div class="mb-3">
@@ -153,7 +167,10 @@
                   class="form-control"
                   id="logPass"
                   placeholder="Password"
+                  required
                 />
+
+                <span id="logPassEr"></span>
               </div>
 
               <a type="submit" class="btn btn-dark border-0 rounded-0" id="login">Login</a>
@@ -167,24 +184,26 @@
                   type="text"
                   class="form-control"
                   id="fName"
-                 
+                 required
                   placeholder="First Name"
                 />
+                <span id="sName"></span>
                  <input
                   type="text"
                   class="form-control"
                   id="lName"
-                 
+                 required
                   placeholder="Last Name"
                 />
+                <span id="sLname"></span>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
-                 
+                 required
                   placeholder="Email Address"
                 />
-                
+                <span id="sIdEr"></span>
               </div>
               <div class="mb-3">
                 <input
@@ -193,12 +212,14 @@
                   id="pass"
                   placeholder="Password"
                 />
+                <span id="sPassEr"></span>
                  <input
                   type="password"
                   class="form-control"
                   id="con_pass"
                   placeholder="Confirm Password"
                 />
+                <span id="sConPass"></span>
               </div>
 
               <a type="submit" class="btn btn-dark border-0 rounded-0" id="register">Register</a>
@@ -333,5 +354,6 @@
 
 
     <script src="Script/acc.js"></script>
+
   </body>
 </html>

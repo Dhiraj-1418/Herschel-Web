@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 main .row .cartDetail img{
-    width: 20%;
+    height:  40vh;
+    padding: 20px;
 }
 main .row .cartDetail{
-    display: flex;
+    /* display: flex;
+    align-items: center; */
+    border:2px solid grey ;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+main .row .cartDetail .row{
     align-items: center;
 }

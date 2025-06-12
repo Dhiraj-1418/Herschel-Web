@@ -92,7 +92,7 @@ addToCartButton.addEventListener("click", async () => {
   const checkCart=returnData.find((el)=>el.id==dataID)
 
   if(checkCart){
-   console.log("Item is Already In Cart")
+   alert("Item is Already In Cart")
 
   }else{
       fetch("http://localhost:3000/cart", {
@@ -103,7 +103,7 @@ addToCartButton.addEventListener("click", async () => {
         body: JSON.stringify({...currentDesData,quantity:1})
       })
     console.log(currentDesData);
-    console.log("Item is added In Cart")
+
   }
 
 });

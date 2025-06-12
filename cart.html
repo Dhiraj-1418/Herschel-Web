@@ -29,7 +29,7 @@
       href="Assets/logo/logo-black.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="Css/cart.css" />
   </head>
 
   <body>
@@ -99,9 +99,19 @@
                 /></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  ><img src="Assets/icons/cart.png" alt=""
-                /></a>
+                <a
+                  class="nav-link active position-relative"
+                  aria-current="page"
+                  href="cart.html"
+                >
+                  <img src="Assets/icons/cart.png" alt="" />
+
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartUpdateNumber"
+                  >
+                  </span>
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
@@ -132,20 +142,29 @@
     </header>
     <main>
       <div class="container-fluid">
-        <div class="row" id="mainSection">
+        <div class="row p-4" id="mainSection">
           <div class="col-lg-12 col-md-12 col-sm-12 cartDetail">
-            <img
-              src="https://herschel.com/content/dam/herschel/products/11546/11546-00001-OS_01.jpg.sthumbnails.2000.2500.webp"
-              alt=""
-            />
-            <div class="priceDetail">
-                <h3>Herschel Classic™ XL Backpack</h3>
-            <p>Price: $65.00</p>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <img
+                src="https://herschel.com/content/dam/herschel/products/11546/11546-00001-OS_01.jpg.sthumbnails.2000.2500.webp"
+                alt=""
+              />
+            </div>
+            <div class="priceDetail col-lg-6 col-md-6 col-sm-12">
+              <h3>Herschel Classic™ XL Backpack</h3>
+              <p>Price: $65.00</p>
             </div>
           </div>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12">
-            <button class="btn btn-dark border-0 rounded-0 w-100" > Check Out </button>
+          <hr />
+          <div class="totalPrice">
+            <p id="totalCartPrice">Total Price :</p>
+          </div>
+          <hr />
+          <button class="btn btn-dark border-0 rounded-0 w-100">
+            Check Out
+          </button>
         </div>
       </div>
     </main>
